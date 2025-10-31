@@ -105,6 +105,7 @@ fun FormatDataDiri(modifier: Modifier
             thickness = dimensionResource(id = R.dimen.padding_small),
             color = Color.DarkGray
         )
+
     }
 
 }
