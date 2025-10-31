@@ -1,11 +1,13 @@
 package com.example.questuserinput_163
 
+import androidx.compose.animation.expandHorizontally
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.selection.selectable
+import androidx.compose.material3.Divider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.RadioButton
@@ -17,6 +19,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.unit.dp
 
 @Composable
@@ -71,6 +75,13 @@ fun FormatDataDiri(modifier: Modifier
             onValueChange = {
                 textAlamat = it
             }
+        )
+        Divider(
+            modifier = Modifier.padding(bottom = dimensionResource(id = R.dimen.padding_medium), top = dimensionResource(
+                id = R.dimen.padding_medium
+            )),
+            thickness = dimensionResource(id = R.dimen.padding_tipis),
+            color = Color.DarkGray
         )
 
     }
