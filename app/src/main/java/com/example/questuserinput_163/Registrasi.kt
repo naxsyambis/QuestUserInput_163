@@ -167,8 +167,25 @@ fun FormRegistrasi(modifier: Modifier){
             )
 
             Row(
-
-            ){}
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(16.dp)
+            ){
+                jenisKelamin.forEach { item ->
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier.selectable(
+                            selected = gender == item,
+                            onClick = { gender = item }
+                        )
+                    ){
+                        RadioButton(
+                            selected = gender == item,
+                            onClick = { gender = item }
+                        )
+                        Text(item)
+                    }
+                }
+            }
         }
     }
 }
