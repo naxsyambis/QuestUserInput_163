@@ -186,6 +186,20 @@ fun FormRegistrasi(modifier: Modifier){
                     }
                 }
             }
+
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                modifier = Modifier.padding(top = 16.dp)
+            ){
+                Checkbox(
+                    checked = isChecked,
+                    onCheckedChange = { isChecked = it }
+                )
+                Text(
+                    text = "Saya setuju dengan syarat dan ketentuan yang berlaku",
+                    modifier = Modifier.padding(start = 4.dp)
+                )
+            }
         }
     }
 }
