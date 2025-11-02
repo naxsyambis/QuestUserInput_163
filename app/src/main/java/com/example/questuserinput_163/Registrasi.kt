@@ -200,8 +200,9 @@ fun FormRegistrasi(modifier: Modifier){
                     modifier = Modifier.padding(start = 4.dp)
                 )
             }
+            var showDialog by remember { mutableStateOf(false) }
             Button(
-                onClick = { },
+                onClick = { showDialog = true },
                 enabled = isChecked,
                 modifier = Modifier
                     .fillMaxWidth()
@@ -209,6 +210,41 @@ fun FormRegistrasi(modifier: Modifier){
                 shape = RoundedCornerShape(12.dp)
             ) {
                 Text(text = stringResource(id = R.string.submit))
+            }
+
+            if (showDialog) {
+                AlertDialog(
+                    onDismissRequest = { showDialog = false },
+                    confirmButton = {
+                        Button(
+                            onClick = { showDialog = false },
+                            shape = RoundedCornerShape(12.dp)
+                        ) {
+                            Text("OK")
+                        }
+                    },
+                    title = {
+                        Text(
+                            text = "Berhasil",
+                            style = MaterialTheme.typography.titleLarge.copy(
+                                fontWeight = FontWeight.Bold
+                            )
+                        )
+                    },
+                    text = {
+                        Text(
+                            text = """
+                                Nama : $nama
+                                Alamat : $kota
+                                Tgl Lahir : $tanggalLahir
+                                RT : $rt
+                                RW : $rw
+                                Umur : $umur
+                            """.trimIndent()
+                        )
+                    },
+                    shape = RoundedCornerShape(16.dp)
+                )
             }
         }
     }
