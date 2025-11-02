@@ -131,6 +131,15 @@ fun FormRegistrasi(modifier: Modifier){
                         shape = RoundedCornerShape(16.dp),
                         modifier = Modifier.width(60.dp)
                     )
+
+                    Box(
+                        modifier = Modifier
+                            .width(1.dp)
+                            .height(40.dp)
+                            .background(Color.Gray)
+                    )
+
+
                 }
             }
         }
