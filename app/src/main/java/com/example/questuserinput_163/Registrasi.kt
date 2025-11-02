@@ -200,6 +200,16 @@ fun FormRegistrasi(modifier: Modifier){
                     modifier = Modifier.padding(start = 4.dp)
                 )
             }
+            Button(
+                onClick = { },
+                enabled = isChecked,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 16.dp),
+                shape = RoundedCornerShape(12.dp)
+            ) {
+                Text(text = stringResource(id = R.string.submit))
+            }
         }
     }
 }
