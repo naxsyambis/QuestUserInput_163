@@ -119,6 +119,19 @@ fun FormRegistrasi(modifier: Modifier){
                     readOnly = true
                 )
                 Spacer(modifier = Modifier.width(8.dp))
+
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(8.dp)
+                ){
+                    OutlinedTextField(
+                        value = rt,
+                        onValueChange = { rt = it },
+                        label = { Text("RT") },
+                        shape = RoundedCornerShape(16.dp),
+                        modifier = Modifier.width(60.dp)
+                    )
+                }
             }
         }
     }
