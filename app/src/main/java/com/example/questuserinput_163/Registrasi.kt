@@ -160,6 +160,15 @@ fun FormRegistrasi(modifier: Modifier){
                 singleLine = true
             )
 
+            Text(
+                text = stringResource(id = R.string.jenis),
+                style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.SemiBold),
+                modifier = Modifier.padding(top = 16.dp, bottom = 8.dp)
+            )
+
+            Row(
+
+            ){}
         }
     }
 }
