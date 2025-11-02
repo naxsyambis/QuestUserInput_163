@@ -148,6 +148,18 @@ fun FormRegistrasi(modifier: Modifier){
                     )
                 }
             }
+
+            Spacer(modifier = Modifier.height(12.dp))
+
+            OutlinedTextField(
+                value = umur,
+                onValueChange = { umur = it },
+                label = { Text("Umur") },
+                shape = RoundedCornerShape(16.dp),
+                modifier = Modifier.fillMaxWidth(),
+                singleLine = true
+            )
+
         }
     }
 }
